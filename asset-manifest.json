@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/textutil_livewebsite/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/textutil_livewebsite/static/js/main.42000060.chunk.js",
+    "main.js.map": "/textutil_livewebsite/static/js/main.42000060.chunk.js.map",
+    "runtime-main.js": "/textutil_livewebsite/static/js/runtime-main.a6a15697.js",
+    "runtime-main.js.map": "/textutil_livewebsite/static/js/runtime-main.a6a15697.js.map",
+    "static/js/2.2c4be4db.chunk.js": "/textutil_livewebsite/static/js/2.2c4be4db.chunk.js",
+    "static/js/2.2c4be4db.chunk.js.map": "/textutil_livewebsite/static/js/2.2c4be4db.chunk.js.map",
+    "static/js/3.c30fbaf1.chunk.js": "/textutil_livewebsite/static/js/3.c30fbaf1.chunk.js",
+    "static/js/3.c30fbaf1.chunk.js.map": "/textutil_livewebsite/static/js/3.c30fbaf1.chunk.js.map",
+    "index.html": "/textutil_livewebsite/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/textutil_livewebsite/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.2c4be4db.chunk.js.LICENSE.txt": "/textutil_livewebsite/static/js/2.2c4be4db.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a6a15697.js",
+    "static/js/2.2c4be4db.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.42000060.chunk.js"
+  ]
+}
