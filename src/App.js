@@ -1,12 +1,17 @@
 // import logo from './logo.svg';
 import "./App.css";
-// import About from "./components/About";
+import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import React, { useState } from 'react'
 import Alert from "./components/Alert";
 
-
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 
 
 function App() {
@@ -53,17 +58,31 @@ function App() {
 
   return (
     <>
+    <Router>
+     
     {/* aboutText="Iam ekno. ka ..." */}
        <Navbar title="TextBlogUtils"  mode={bgmode} toggleMode={toggleBgMode} displayAlert={displayAlert}/> 
 
        <Alert alert={alert} />
 
-      <div className="container">
-        <TextForm heading="TextUtils: Word Counter, Character Counter, Text Manipulator" mode={bgmode} displayAlert={displayAlert}/>
-      </div>
+<div className="container">
+       <Routes>
+         <Route path="/about" element={<About mode={bgmode}/>}/>
+           
 
+         <Route path="/" element={<TextForm heading="TextUtils: Word Counter, Character Counter, Text Manipulator" mode={bgmode} displayAlert={displayAlert} />}/>
+         
+         
+         
+        
+
+      </Routes>
+      </div>
       {/* <About mode={bgmode}/>; */}
-    </>
+      
+      </Router>
+      </>
+    
   );
 }
 
