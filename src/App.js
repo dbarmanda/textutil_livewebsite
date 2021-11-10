@@ -67,16 +67,18 @@ function App() {
 
 <div className="container">
        <Routes>
-         <Route path="/about" element={<About mode={bgmode}/>}/>
+         <Route exact path="/about" element={<About mode={bgmode}/>}/>
            
-
-         <Route path="/" element={<TextForm heading="TextUtils: Word Counter, Character Counter, Text Manipulator" mode={bgmode} displayAlert={displayAlert} />}/>
+      
+         <Route exact path="/" element={<TextForm heading="TextUtils: Word Counter, Character Counter, Text Manipulator" mode={bgmode} displayAlert={displayAlert} />}/>
          
          
          
         
 
       </Routes>
+     
+
       </div>
       {/* <About mode={bgmode}/>; */}
       
