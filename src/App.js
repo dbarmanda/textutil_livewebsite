@@ -59,10 +59,10 @@ function App() {
        <Alert alert={alert} />
 
       <div className="container">
-        <TextForm heading="Enter text for Modification" mode={bgmode} displayAlert={displayAlert}/>
+        <TextForm heading="TextUtils: Word Counter, Character Counter, Text Manipulator" mode={bgmode} displayAlert={displayAlert}/>
       </div>
 
-      {/* <About/>; */}
+      {/* <About mode={bgmode}/>; */}
     </>
   );
 }

@@ -62,13 +62,21 @@ export default function TextForm(props) {
     props.displayAlert('success', 'Text-area cleared!')
   }
   
+  const copyText = ()=> {
+    navigator.clipboard.writeText(text);
+    // document.getSelection().removeAllRanges();
+    props.displayAlert('success', 'Text copied!')
+
+  }
+
+
   return (
     <>
 
     <div className="container ">
       <div className="mb-3">
         <label htmlFor="text" className={`form-label my-3 text-${props.mode === 'light' ? 'dark' : 'light'}`}>
-          {props.heading}:
+          <h1>{props.heading}:</h1>
         </label>
         <textarea
           className="form-control"
@@ -88,27 +96,31 @@ export default function TextForm(props) {
         ></textarea>
 
 
-        <button className="btn btn-primary my-3 mx-1" onClick={handleUpClick}>
+        <button disabled={text.length === 0} className="btn btn-primary my-3 mx-1" onClick={handleUpClick}>
           Convert To Uppercase
         </button>
 
-        <button className="btn btn-warning my-3 mx-1" onClick={handleLowClick}>
+        <button disabled={text.length === 0} className="btn btn-warning my-3 mx-1" onClick={handleLowClick}>
           Convert To LowerCase
         </button>
 
-        <button className="btn btn-danger mx-1" onClick={clearText}>Clear Text</button>
+        <button disabled={text.length === 0} className="btn btn-danger mx-1" onClick={clearText}>Clear Text</button>
+
+        <button disabled={text.length === 0} className="btn btn-success mx-1" onClick={copyText}>Copy Text</button>
       </div>
     </div>
 
 
     <div className={`container text-${props.mode === 'light' ? 'dark' : 'light'}`}>
       <h2>Your Text Analysis:</h2>
-      <p>{text.split(" ").length} words and {text.length} characters!</p>
+      <p>{text.split(/\s+/).filter((element)=>{
+        return element.length!==0;
+        }).length} words and {text.length} characters!</p>
 
-      <p>Reading time: {0.008 * text.split(" ").length}min </p>
+      <p>Reading time: {0.008 * text.split(" ").filter((element)=>{return element.length}).length}min </p>
 
       <h3>Preview</h3>
-      <p>{text.lenght>0?text:"Enter something to Preview!"}</p>
+      <p>{text.length>0?text:"Enter something to Preview!"}</p>
     </div>
     </>
   );
